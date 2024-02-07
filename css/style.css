@@ -11,9 +11,9 @@
 	/* Colors */
 	--color-white: #ffffff;
 	--color-black: #050a13;
-	--color-blue: #03e8f9;
 	--color-orange: #fd6413;
 	--color-gray: #1b1e26;
+	--color-pink: #ff91af;
 }
 
 * {
@@ -93,4 +93,52 @@ button:focus {
 
 .header__menu__item.active {
 	border: 1px solid var(--color-white);
+	border-radius: 4px;
+}
+
+/* Home */
+#home {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	padding: 5rem 1rem;
+	padding-top: 7rem;
+	text-align: center;
+}
+
+.home__avatar {
+	width: 150px;
+	height: 250px;
+	
+	object-fit: cover;	/*이미지의 원래 비율 유지*/
+	border: 3px solid var(--color-accent);
+}
+
+.home__title {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.home__title--strong {
+	color: var(--color-pink);
+}
+
+.home__description {
+	font-size: 1.3rem;
+}
+
+.home__contact {
+	display: inline-block;
+	background-color: var(--color-pink);
+	padding: 0.5rem 1rem;
+	margin: 2rem;
+	font-weight: bold;
+	color: var(--color-black);
+	border-radius: 10px;
+
+}
+
+.home__contact:hover {
+	background-color: transparent;
+	color: var(--color-white);
+	outline: 2px solid var(--color-white);
 }
