@@ -131,40 +131,45 @@
           <p class="description">Projects</p>
           <ul class="categories">
             <li>
-              <button class="category category--selected">All <span class="category__count">8</span></button>
+              <button class="category category--selected">
+                All <span class="category__count">8</span>
+              </button>
             </li>
             <li>
-              <button class="category">Front-end <span class="category__count">3</span></button>
+              <button class="category">
+                Front-end <span class="category__count">3</span>
+              </button>
             </li>
             <li>
-              <button class="category">Back-end <span class="category__count">3</span></button>
+              <button class="category">
+                Back-end <span class="category__count">3</span>
+              </button>
             </li>
           </ul>
         </div>
-        <ul>
-          <li>
+        <ul class="projects">
+          <li class="project">
             <a href="#" target="_blank">
-              <img src="images/projects/project1.PNG" alt="project1" />
-              <div>
-                <h3>Project #1</h3>
+              <img
+                src="images/projects/project1.PNG"
+                alt="project1"
+                class="project__img"
+              />
+              <div class="project__metadata">
+                <h3 class="project__title">Project #1</h3>
                 <p>Coding with HTML, CSS, Javascript, API</p>
               </div>
             </a>
           </li>
-          <li>
+          <li class="project">
             <a href="#" target="_blank">
-              <img src="images/projects/project1.PNG" alt="project2" />
-              <div>
-                <h3>Project #2</h3>
-                <p>Coding with HTML, CSS, Javascript, API</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="images/projects/project1.PNG" alt="project1" />
-              <div>
-                <h3>Project #1</h3>
+              <img
+                src="images/projects/project1.PNG"
+                alt="project2"
+                class="project__img"
+              />
+              <div class="project__metadata">
+                <h3 class="project__title">Project #2</h3>
                 <p>Coding with HTML, CSS, Javascript, API</p>
               </div>
             </a>
@@ -173,32 +178,40 @@
       </section>
       <!-- Arrow up -->
       <aside>
-        <a href="#home" title="back to top"
+        <a class="arrow-up" href="#home" title="back to top"
           ><i class="fa-solid fa-arrow-up"></i
         ></a>
       </aside>
     </main>
 
-    <!-- footer -->
+    <!-- Footer -->
     <footer id="contact" class="section">
-      <h2 class="title">Let&#39;s talk</h2>
-      <p class="description">wbdl2747@gmail.com</p>
-      <ul>
-        <li>
-          <a href="https://github.com/Katie27-maker" title="my github link">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/juhee-kim-7686a9256/"
-            target="_blank"
-            title="my linkein link"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
+      <div>
+        <h2 class="title">Let&#39;s talk</h2>
+        <p class="description">wbdl2747@gmail.com</p>
+        <ul>
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/Katie27-maker"
+              target="_blank"
+              title="my github link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://www.linkedin.com/in/juhee-kim-7686a9256/"
+              target="_blank"
+              title="my linkein link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
