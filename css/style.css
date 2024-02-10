@@ -11,9 +11,9 @@
 	/* Colors */
 	--color-white: #ffffff;
 	--color-black: #050a13;
+	--color-blue: #03e8f9;
 	--color-orange: #fd6413;
 	--color-gray: #1b1e26;
-	--color-pink: #ff91af;
 
 	/* Size */
 	--size-max-width: 1200px;
@@ -53,7 +53,7 @@ button {
 }
 
 button:focus {
-	outline: 1px solid var(--color-accent);
+	outline: 1px solid transparent;
 }
 
 /* Common */
@@ -64,6 +64,7 @@ button:focus {
 
 .max-container {
 	max-width: var(--size-max-width);
+	margin: auto;
 }
 
 .title {
@@ -93,7 +94,7 @@ button:focus {
 }
 
 .header--dark {
-	background-color: var(--color-pink);
+	background-color: var(--color-primary);
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -159,7 +160,7 @@ button:focus {
 }
 
 .home__title--strong {
-	color: var(--color-pink);
+	color: var(--color-accent);
 }
 
 .home__description {
@@ -168,7 +169,7 @@ button:focus {
 
 .home__contact {
 	display: inline-block;
-	background-color: var(--color-pink);
+	background-color: var(--color-accent);
 	padding: 0.5rem 1rem;
 	margin: 2rem;
 	font-weight: bold;
@@ -179,8 +180,8 @@ button:focus {
 
 .home__contact:hover {
 	background-color: transparent;
-	color: var(--color-white);
-	outline: 2px solid var(--color-white);
+	color: var(--color-text);
+	outline: 2px solid var(--color-accent);
 }
 
 /* About */
@@ -192,19 +193,18 @@ button:focus {
 }
 
 .major {
-	background-color: var(--color-accent-variant);
+	background-color: var(--color-primary-variant);
 	padding: 2rem 1rem;
-	color: var(--color-white);
+	color: var(--color-text);
+	border-radius: 1rem;
 	cursor: default;
 	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
-	border-radius: 15px;
-	background-color: var(--color-gray);
 }
 
 .majors__icon {
 	font-size: 4rem;
 	margin: 1rem 0;
-	color: var(--color-pink);
+	color: var(--color-accent);
 	transition: all 300ms ease;
 }
 
@@ -226,8 +226,8 @@ button:focus {
 
 /* Skills */
 #skills {
-	background-color: var(--color-black);
-	color: var(--color-white);
+	background-color: var(--color-primary-variant);
+	color: var(--color-text);
 }
 
 .skills {
@@ -240,7 +240,7 @@ button:focus {
 }
 
 .skills__title {
-	color: var(--color-pink);
+	color: var(--color-accent);
 	margin: 1rem 0;
 	font-size: 1rem;
 }
@@ -248,7 +248,7 @@ button:focus {
 .skills__coding {
 	grid-row: span 2;
 	padding: 1rem;
-	background-color: var(--color-gray);
+	background-color: var(--color-primary);
 }
 
 .skills__tools {
@@ -257,14 +257,14 @@ button:focus {
 
 .skills__etc {
 	padding: 1rem;
-	background-color: var(--color-gray);
+	background-color: var(--color-primary);
 	filter: brightness(150%);
 }
 
 /* Work */
 #work {
-	background-color: var(--color-black);
-	color: var(--color-white);
+	background-color: var(--color-primary);
+	color: var(--color-text);
 }
 
 .categories {
@@ -276,18 +276,18 @@ button:focus {
 
 .category {
 	position: relative;
-	color: var(--color-white);
+	color: var(--color-text);
 	font-size: 1.1rem;
 	padding: 0.5rem 3.5rem;
 	border-radius: 5px;
-	border: 1px solid var(--color-pink);
+	border: 1px solid var(--color-accent);
 	cursor: pointer;
 	white-space: nowrap;
 }
 
 .category--selected {
-	background-color: var(--color-black);
-	color: var(--color-pink);
+	background-color: var(--color-accent);
+	color: var(--color-primary);
 }
 
 .category__count {
@@ -299,8 +299,8 @@ button:focus {
 	height: 28px;
 	line-height: 28px;
 	border-radius: 100%;
-	background-color: var(--color-orange);
-	color: var(--color-white);
+	background-color: var(--color-accent-variant);
+	color: var(--color-text);
 	transition: all 250ms ease-in;
 }
 
@@ -361,7 +361,7 @@ button:focus {
 
 /*Arroy up*/
 .arrow-up {
-	background-color: var(--color-white);
+	background-color: var(--color-black);
 	position: fixed;
 	bottom: 3rem;
 	right: 3rem;
@@ -370,12 +370,20 @@ button:focus {
 	height: 4rem;
 	border-radius: 100%;
 	text-align: center;
-	box-shadow: 5px 5px 0px 0px var(--color-orange)
+	box-shadow: 5px 5px 0px 0px var(--color-blue)
+}
+
+/* arrowUp.style.opacity = 2 - homeHeigth  / window.scrollY; */
+/* 이렇게 바로 자스에서 구현해주는 방법도 있다. 가상 클래스를 안 만들어줘서 됨 */
+/* 하지만 클래스로 해주면 많은걸 할 수 있고 유지보수 하기에 좋다. */
+.arrow--visible {
+	transition: opacity 300ms ease-in;
+	/* opacity: 0.010; */
 }
 
 /* Footer */
 #contact {
-	background-color: var(--color-pink);
+	background-color: var(--color-white);
 	color: var(--color-black);
 }
 
@@ -384,7 +392,8 @@ button:focus {
 	justify-content: center;
 	gap: 1rem;
 	padding: 1rem;
-	font-size: 2rem;
+	font-size: 3rem;
+	color: var(--color-black);
 }
 
 .contact__link {
@@ -392,7 +401,7 @@ button:focus {
 }
 
 .contact__link:hover {
-	color: var(--color-white);
+	color: var(--color-black);
 }
 
 
