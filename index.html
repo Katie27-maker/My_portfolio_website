@@ -45,11 +45,11 @@
         <img class="header__logo__img" src="/images/modified.ico" />
         <h1 class="header__logo__title"><a href="#">JUHEE</a></h1>
       </div>
-      <nav>
-        <ul class="header__nav">
-          <li><a class="header__menu__item active" href="#Home">home</a></li>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">home</a></li>
           <li><a class="header__menu__item" href="#About">about</a></li>
-          <li><a class="header__menu__item" href="#Skills">my work</a></li>
+          <li><a class="header__menu__item" href="#skills">my skills</a></li>
           <li><a class="header__menu__item" href="#Work">work</a></li>
           <li><a class="header__menu__item" href="#contact">contect</a></li>
         </ul>
@@ -59,17 +59,20 @@
     <main>
       <!-- Home -->
       <section id="home">
-        <img
-          home="home__avatar"
-          src="images/modified.ico"
-          alt="Ellie's profile"
-        />
-        <h2 class="home__title">
-          Hello <br />
-          <strong class="home__title--strong">I&#39;m Developer, </strong>Juhee
-        </h2>
-        <p class="home__description">A web developer</p>
-        <a class="home__contact" href="#contact">Contact me</a>
+        <div class="home__container">
+          <img
+            home="home__avatar"
+            src="images/modified.ico"
+            alt="Ellie's profile"
+          />
+          <h2 class="home__title">
+            Hello <br />
+            <strong class="home__title--strong">I&#39;m Developer, </strong
+            >Juhee
+          </h2>
+          <p class="home__description">A web developer</p>
+          <a class="home__contact" href="#contact">Contact me</a>
+        </div>
       </section>
       <!-- About -->
       <section id="About" class="section max-container">
@@ -88,11 +91,12 @@
             <i class="fa-solid fa-server majors__icon"></i>
             <p class="major__title">Back-end</p>
             <p>Java</p>
+            <p>python</p>
           </li>
         </ul>
       </section>
       <!-- Skills -->
-      <section id="Skills" class="section">
+      <section id="skills" class="section">
         <div class="max-container">
           <h2 class="title">My Skills</h2>
           <p class="description">Skills & Attributes</p>
@@ -111,6 +115,7 @@
               <ul>
                 <li>Visual Studio Code</li>
                 <li>IntelliJ</li>
+                <li>Brackets</li>
                 <li>Figma</li>
               </ul>
             </section>

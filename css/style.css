@@ -2,9 +2,9 @@
 :root {
 	/* App Colors - css변수*/
 	--color-primary: var(--color-black);
-	--color-primary-varient: var(var(--color-gray))
+	--color-primary-variant: var(--color-gray);
 	--color-accent: var(--color-blue);
-	--color-accent-variant: var(var(--color-orange))
+	--color-accent-variant: var(--color-orange);
 	--color-text: var(--color-white);
 	
 
@@ -79,7 +79,7 @@ button:focus {
 
 /* Header */
 .header {
-	background-color: black;
+	background-color: transparent;
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -89,6 +89,12 @@ button:focus {
 	padding: 1rem;
 	color: white;
 	z-index: 1;
+	transition: all 300ms ease;
+}
+
+.header--dark {
+	background-color: var(--color-pink);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header__logo {
@@ -131,6 +137,12 @@ button:focus {
 	padding: 5rem 1rem;
 	padding-top: 7rem;
 	text-align: center;
+	/* opacity: 0.5; */
+}
+
+#home--shadow {
+	transition: all var(--color-black) ease-in-out;
+	opacity: 0.5;
 }
 
 .home__avatar {
@@ -299,7 +311,7 @@ button:focus {
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 5fr);
 	grid-template-rows: repeat(2, 1fr);
 	gap: 1rem;
 }
@@ -449,7 +461,7 @@ button:focus {
 	}
 
 	.projects {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 2fr);
 	}
 		
 	.arrow-up {
