@@ -11,7 +11,7 @@
 	/* Colors */
 	--color-white: #ffffff;
 	--color-black: #050a13;
-	--color-blue: #03e8f9;
+	--color-blue: 	#FF78C1;
 	--color-orange: #fd6413;
 	--color-gray: #1b1e26;
 
@@ -38,7 +38,7 @@ ul {
 }
 
 li {
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 a {
@@ -83,12 +83,11 @@ button:focus {
 	background-color: transparent;
 	position: fixed;
 	top: 0;
+	width: 100%;
+	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
 	align-items: center;
-	padding: 1rem;
-	color: white;
 	z-index: 1;
 	transition: all 300ms ease;
 }
@@ -110,16 +109,27 @@ button:focus {
 }
 
 .header__logo__title {
-	font-style: 1.8rem;	/*상대적인 유닛*/
+	font-size: 1.8rem;	/*상대적인 유닛*/
+}
+
+.header__toggle {
+	display: none;
+	color: var(--color-white);
+	font-size: 1.5rem;
+	position: absolute;
+	top: 1.3rem;
+	right: 1rem;
 }
 
 .header__menu {
 	display: flex;
-	gap: 3px;
+	gap: 2px;	
 }
 
 .header__menu__item {
+	display: block;
 	padding: 8px 16px;
+	border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -127,7 +137,8 @@ button:focus {
 }
 
 .header__menu__item.active {
-	border: 1px solid var(--color-white);
+	
+	border: 1px solid var(--color-blue);
 	border-radius: 4px;
 }
 
@@ -149,7 +160,7 @@ button:focus {
 .home__avatar {
 	width: 150px;
 	height: 250px;
-	
+	border-radius: 100%;
 	object-fit: cover;	/*이미지의 원래 비율 유지*/
 	border: 3px solid var(--color-accent);
 }
@@ -174,7 +185,7 @@ button:focus {
 	margin: 2rem;
 	font-weight: bold;
 	color: var(--color-black);
-	border-radius: 10px;
+	border-radius: 4px;
 
 }
 
@@ -314,6 +325,7 @@ button:focus {
 	grid-template-columns: repeat(4, 5fr);
 	grid-template-rows: repeat(2, 1fr);
 	gap: 1rem;
+	transition: all 250ms ease-out;
 }
 
 .project {
@@ -366,15 +378,16 @@ button:focus {
 	bottom: 3rem;
 	right: 3rem;
 	font-size: 3rem;
-	width: 4rem;
-	height: 4rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	border-radius: 100%;
 	text-align: center;
-	box-shadow: 5px 5px 0px 0px var(--color-blue)
+	box-shadow: 5px 5px 0px 0px var(--color-blue);
+	transition: opacity 300ms ease-in;
 }
 
 /* arrowUp.style.opacity = 2 - homeHeigth  / window.scrollY; */
-/* 이렇게 바로 자스에서 구현해주는 방법도 있다. 가상 클래스를 안 만들어줘서 됨 */
+/* 이렇게 바로 자스에서 구현해주는 방법도 있다. 가상 클래스를 안 만들어줘도 됨 */
 /* 하지만 클래스로 해주면 많은걸 할 수 있고 유지보수 하기에 좋다. */
 .arrow--visible {
 	transition: opacity 300ms ease-in;
@@ -420,15 +433,40 @@ button:focus {
 
 	.header {
 		flex-direction: column;
-		align-items: center;
+		align-items: start;
+		background-color: var(--color-primary);
 	}
 
+	.header__toggle {
+		display: block;
+		color: var(--color-white);
+		font-size: 2rem;
+		position: absolute;
+		top: 1.3rem;
+		right: 1rem;
+	   }
+
 	.header__menu {
+		display: flex;
 		flex-direction: column;
 		text-align: center;
-		padding: 1rem 4rem;
-		gap: 1rem;
+		gap: 0.05rem;
+		display: none;		/*좁혔을 때 메뉴바가 안 보이게 숨겨놓음*/
 	}
+
+	.header__menu.open {
+		display: flex;
+	}
+
+	.header__menu__item {
+		display: block;
+		padding: 8px 16px;
+		border-bottom: 0.5px solid transparent;
+	   }
+
+	.header__menu.open {
+		display: flex;
+	   }
 
 	.header__nav {
 		width: 100%;

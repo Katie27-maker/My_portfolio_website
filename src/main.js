@@ -37,4 +37,18 @@ document.addEventListener('scroll', () => {
 
 
 // 방법 home높이 기준이니까 homeHeigth이 변수를 가져와서 쓰면 되겠다 싶었지만
-// 나는 윈도우 기준에서 350까지 내려가면 화살표가 지워지게 구현하였다.
+// 나는 윈도우 기준에서 350까지 내려가면 화살표가 지워지게 구현
+
+
+// Navbar바 토글버튼 클릭 처리
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
+navbarToggle.addEventListener('click', () => {
+	navbarMenu.classList.toggle('open');
+});
+
+
+// Navbar 메뉴 클릭스 메뉴를 자동으로 닫아줌
+navbarMenu.addEventListener('click', () => {
+	navbarMenu.classList.remove('open');
+})
