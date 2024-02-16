@@ -4,17 +4,16 @@
 const header = document.querySelector('.header');
 const headerHeight = header.getBoundingClientRect().height;	// getBoundingClientRect 높이를 반환해주는 함수임
 
-document.addEventListener('scroll', () => {
-	if(window.screenY > headerHeight) {
+document.addEventListener('scroll', () => {		// 화살표 함수
+	if(window.scrollY > headerHeight) {
 		header.classList.add('header--dark');
 	} else {
 		header.classList.remove('header--dark');
 	}
-	
-})
+});
 
 
-// Header에 페이지 아래로 스크롤시 다크 스타일링 적용
+// Header에 페이지 아래로 스크롤시 Home에 다크 스타일링 적용
 const home = document.querySelector('.home__container');
 const homeHeigth = home.offsetHeight;
 document.addEventListener('scroll', () => {
@@ -54,3 +53,5 @@ navbarToggle.addEventListener('click', () => {
 navbarMenu.addEventListener('click', () => {
 	navbarMenu.classList.remove('open');
 })
+
+document.getElementById

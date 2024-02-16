@@ -8,7 +8,7 @@ const projectsContainer = document.querySelector('.projects')
 
 categories.addEventListener('click', (event) => {
 	const filter = event.target.dataset.category;
-	if(filter == null) {
+	if(filter == null) {	// null이었을 때 카테고리 종료
 		return;
 	}
 
@@ -23,13 +23,13 @@ categories.addEventListener('click', (event) => {
 	projects.forEach((project) => {
 		if(filter === 'all' || filter === project.dataset.type) {
 			project.style.display = 'block';
-			projectsContainer.style.opacity = 1;
+			projectsContainer.style.opacity = 3;
 			projectsContainer.style.scale = 1;
 
 		} else {
 			project.style.display = 'none';
 			projectsContainer.style.opacity = 0;
-			projectsContainer.style.scale = 0;
+			// projectsContainer.style.scale = 0;
 		}
 		// (filter === 'all' || filter === project.dataset.type) ? project.style.display = 'block' : project.style.display = 'none';
 	});

@@ -33,6 +33,7 @@
     <!-- Javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
     <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -144,17 +145,17 @@
           <ul class="categories">
             <li>
               <button class="category category--selected" data-category="all">
-                All <span class="category__count">8</span>
+                All <span class="category__count">2</span>
               </button>
             </li>
             <li>
               <button class="category" data-category="front-end">
-                Front-end <span class="category__count">3</span>
+                Front-end <span class="category__count">2</span>
               </button>
             </li>
             <li>
               <button class="category" data-category="back-end">
-                Back-end <span class="category__count">3</span>
+                Back-end <span class="category__count">1</span>
               </button>
             </li>
           </ul>
@@ -198,10 +199,10 @@
 
     <!-- Footer -->
     <footer id="contact" class="section">
-      <div>
+      <div class="max-container">
         <h2 class="title">Let&#39;s talk</h2>
         <p class="description">wbdl2747@gmail.com</p>
-        <ul>
+        <ul class="contact__links">
           <li>
             <a
               class="contact__link"
@@ -217,7 +218,7 @@
               class="contact__link"
               href="https://www.linkedin.com/in/juhee-kim-7686a9256/"
               target="_blank"
-              title="my linkein link"
+              title="my linkedin link"
             >
               <i class="fa-brands fa-linkedin"></i>
             </a>

@@ -3,7 +3,7 @@
 	/* App Colors - css변수*/
 	--color-primary: var(--color-black);
 	--color-primary-variant: var(--color-gray);
-	--color-accent: var(--color-pink);
+	--color-accent: var(--color-blue);
 	--color-accent-variant: var(--color-orange);
 	--color-text: var(--color-white);
 	
@@ -11,7 +11,7 @@
 	/* Colors */
 	--color-white: #ffffff;
 	--color-black: #050a13;
-	--color-pink: 	#FF78C1;
+	--color-blue: 	#FF78C1;
 	--color-orange: #fd6413;
 	--color-gray: #1b1e26;
 
@@ -21,10 +21,6 @@
 
 * {
 	box-sizing: border-box;
-}
-
-html {
-	scroll-behavior: smooth;
 }
 
 body {
@@ -84,7 +80,7 @@ button:focus {
 
 /* Header */
 .header {
-	background-color: transparent;	/*배경색 투명하게 스크롤되면 블랙으로*/
+	background-color: transparent;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -93,7 +89,7 @@ button:focus {
 	justify-content: space-between;
 	align-items: center;
 	z-index: 1;
-	transition: all 300ms ease;	/*모든 속성에 대해서 300ms동안  ease 옵션 주기*/
+	transition: all 300ms ease;
 }
 
 .header--dark {
@@ -137,12 +133,12 @@ button:focus {
 }
 
 .header__menu__item:hover {
-	border-bottom: 1px solid var(--color-pink);
+	border-bottom: 1px solid var(--color-accent);
 }
 
 .header__menu__item.active {
 	
-	border: 1px solid var(--color-pink);
+	border: 1px solid var(--color-blue);
 	border-radius: 4px;
 }
 
@@ -335,8 +331,8 @@ button:focus {
 }
 
 .project.anim-out {
-	opacity: 0;
-	transform: scale(0.96) translateY(20px);
+	/* opacity: 0; */
+	/* transform: scale(0.1) translateX(20px); */
 }
 
 .project {
@@ -393,7 +389,7 @@ button:focus {
 	height: 3.5rem;
 	border-radius: 100%;
 	text-align: center;
-	box-shadow: 5px 5px 0px 0px var(--color-pink);
+	box-shadow: 5px 5px 0px 0px var(--color-blue);
 	transition: opacity 300ms ease-in;
 }
 
@@ -407,8 +403,8 @@ button:focus {
 
 /* Footer */
 #contact {
-	background-color: var(--color-primary);
-	color: var(--color-text);
+	background-color: var(--color-white);
+	color: var(--color-black);
 }
 
 .contact__links {
@@ -425,7 +421,7 @@ button:focus {
 }
 
 .contact__link:hover {
-	color: var(--color-pink);
+	color: var(--color-black);
 }
 
 
