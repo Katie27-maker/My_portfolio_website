@@ -6,16 +6,18 @@
 
 // #기본 동작 구현
 const sectionIds = ['#home','#about','#skills','#work','#contact',];
-
 const sections = sectionIds.map((id) => document.querySelector(id));
-const navItems = sectionIds.map((id) => document.querySelector(`[href="${id}"]`));      //  (id)화살표 함수는 가로 안에 넣어야함 아니면 타입 에러가 뜸
+const navItems = sectionIds.map((id) => document.querySelector(`[href="${id}"]`));
+      //  (id)화살표 함수는 가로 안에 넣어야함 아니면 타입 에러가 뜸
 
 const visibleSelections = sectionIds.map(() => false);
 let activeNavItem = navItems[0];
+console.log(activeNavItem);
 
 const options = {
-    rootMargin: '-20% 0px 0px 0px',
-    threshold: [0, 0.05],
+    threshold: [0, 0.25, 0.5],
+    rootMargin: '-200px 0px 0px 0px',
+    threshold: [0, 0.98],
 };
 
 
