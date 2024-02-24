@@ -48,6 +48,7 @@ li {
 a {
 	text-decoration: none;
 	color: var(--color-text);
+	color: black;
 }
 
 button {
@@ -60,6 +61,20 @@ button:focus {
 	outline: 1px solid transparent;
 }
 
+img {
+	max-width: 100%;
+	width: auto !important;
+	height: auto !important;
+}
+
+hr {
+	width: 80%;
+	height: 10%;
+	color: var(--color-pink);
+	margin: 0 auto;
+	size: "3";
+}
+
 /* Common */
 .section {
 	padding: 4rem;
@@ -68,7 +83,7 @@ button:focus {
 
 .max-container {
 	max-width: var(--size-max-width);
-	margin: auto;
+	margin: auto;	/*margin 이 알아서 잡힘*/
 }
 
 .title {
@@ -78,13 +93,13 @@ button:focus {
 
 .description {
 	font-size: 1.5rem;
-	margin: 0.5rem 0;;
+	margin: 0.5rem 0;
 }
 
 
 /* Header */
 .header {
-	background-color: transparent;	/*배경색 투명하게 스크롤되면 블랙으로*/
+	background-color: transparent;	/*배경색 투명하게 스크롤되면 핑크색으로*/
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -96,8 +111,11 @@ button:focus {
 	transition: all 300ms ease;	/*모든 속성에 대해서 300ms동안  ease 옵션 주기*/
 }
 
-.header--dark {
-	background-color: var(--color-primary);
+.header--pink {
+	background: #FFAFBD;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -118,7 +136,7 @@ button:focus {
 
 .header__toggle {
 	display: none;
-	color: var(--color-white);
+	color: var(--color-black);
 	font-size: 1.5rem;
 	position: absolute;
 	top: 1.3rem;
@@ -142,13 +160,12 @@ button:focus {
 
 .header__menu__item.active {
 	
-	border: 1px solid var(--color-pink);
+	border: 1px solid var(--color-white);
 	border-radius: 4px;
 }
 
 /* Home */
 #home {
-	background-color: var(--color-primary);
 	color: var(--color-white);
 	padding: 5rem 1rem;
 	padding-top: 7rem;
@@ -172,6 +189,7 @@ button:focus {
 .home__title {
 	font-size: 3rem;
 	margin-bottom: 1rem;
+	color: var(--color-black);
 }
 
 .home__title--strong {
@@ -180,6 +198,7 @@ button:focus {
 
 .home__description {
 	font-size: 1.3rem;
+	color: black;
 }
 
 .home__contact {
@@ -195,19 +214,47 @@ button:focus {
 
 .home__contact:hover {
 	background-color: transparent;
-	color: var(--color-text);
+	color: var(--color-black);
 	outline: 2px solid var(--color-accent);
 }
 
 /* About */
-.majors {
+#about {
 	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin: 2.5rem 0;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
-.major {
+.majors {
+	width: 700px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-flow: row wrap;
+	/* gap: 3rem; */
+	margin: 1rem;
+	
+}
+
+svg {
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.majors__icon__title {
+	height: 60px;
+	width: 250px;
+	display: flex;
+	/* justify-content: center; */
+	margin-bottom: 25px;
+}
+
+.major__subject {
+	text-align: left;
+}
+
+
+/* .major {
 	background-color: var(--color-primary-variant);
 	padding: 2rem 1rem;
 	color: var(--color-text);
@@ -237,22 +284,99 @@ button:focus {
 .max-container {
 	max-width: var(--size-max-width);
 	margin: auto;
-}
+} */
 
 /* Skills */
-#skills {
-	background-color: var(--color-primary-variant);
-	color: var(--color-text);
+.description {
+	font-size: 1.7rem;
+	margin-bottom: 40px;
 }
 
-.skills {
-	display: grid;
-	grid-template-columns: 6fr 4fr;
-	margin: 2rem 3rem;
+.skills__magin {
+	margin: 20px;
+}
+
+.skills__list {
+	/* margin: 20 20 20 5px; */
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.skills__list__ctro__comuni {
+	margin-top: 200px;
+	margin-left: 20px;
+}
+
+.skills__list__front__back {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skills__front__list {
+	margin-bottom: 20px;
+	width: 350px;
+	height: 650px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+
+.skills__front__list:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.skills__backend__list {
+	width: 250px;
+	height: 270px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+
+.skills__backend__list:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.skills__controll__list {
+	margin-bottom: 20px;
+	width: 330px;
+	height: 230px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+
+.skills__controll__list:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.skills__comuni__list {
+	width: 330px;
+	height: 200px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+}
+
+.skills__comuni__list:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.skills__front__list, .skills__backend__list, .skills__controll__list, .skills__comuni__list ,.skills__comuni__list {
+	border-radius: 20px;
+}
+
+
+/* .skills {
+	color: var(--color-text);
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column wrap;
+	align-content: space-around;
+	margin: 1rem 3rem 1rem 1rem;
 	border-radius: 8px;
 	overflow: hidden;
-	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
-}
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 40, 0.01), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
+}  */
 
 .skills__title {
 	color: var(--color-accent);
@@ -263,16 +387,18 @@ button:focus {
 .skills__coding {
 	grid-row: span 2;
 	padding: 1rem;
-	background-color: var(--color-primary);
+
+	background-color: var(--color-white);
 }
 
 .skills__tools {
+	background-color: var(--color-white);
 	padding: 1rem;
 }
 
 .skills__etc {
 	padding: 1rem;
-	background-color: var(--color-primary);
+	background-color: var(--color-white);
 	filter: brightness(150%);
 }
 
@@ -324,29 +450,41 @@ button:focus {
 	top: 0;
 }
 
+
+/* 프로젝트 */
 .projects {
 	display: grid;
-	opacity: 1;
-	grid-template-columns: repeat(4, 5fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 2fr);
+	grid-template-rows: repeat(1, 1fr);
 	gap: 1rem;
-	scale: 1;
-	transition: all 2s ease-out;
-}
-
-.project.anim-out {
-	opacity: 0;
-	transform: scale(0.96) translateY(20px);
+	transition: all 250ms ease-out;
+	position: relative;
 }
 
 .project {
-	position: relative;
-	border-radius: 8px;
-	overflow: hidden;
+	width: 550px;
+	height: 320px;
 }
 
 .project__img {
+	border-radius: 10px;
 	width: 100%;
+}
+
+.project__details {
+	display: none;
+	background-color: gray;
+	padding: 10px;
+	border: 1px solid #ccc;
+	z-index: 1;
+	left: 0; /* 추가 */
+	width: 100%; /* 추가 */
+	height: 100%;
+	border-radius: 10px;
+ }
+
+.projects__img:hover .project__details {
+	display: block;
 }
 
 .project__metadata {
@@ -368,8 +506,8 @@ button:focus {
 .project__metadata:hover {
 	opacity: 0.8;
 	transform: translateY(0px);
-}
-
+   }
+   
 .project__title:after {
 	content: '';
 	display: block;
@@ -377,9 +515,46 @@ button:focus {
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 0.5rem 0;
-	width: 100px;
+	width: 50px;
 	height: 2px;
 	background-color: var(--color-pink);
+}
+
+.project__skills {
+	color: white;
+}
+
+/*  */
+.project__details__title {
+	display: flex;
+	justify-content: center;
+}
+
+.project__title__ul {
+	display: flex;
+	margin-left: 50px;
+}
+
+.project__title__ul1 {
+	list-style: none;
+}
+
+.project__title__ul1>li {
+	float: left;
+	margin-left: 10px;
+}
+
+.project__title__ul2{
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.project__title__ul2>ul>li {
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 5px;
 }
 
 /*Arroy up*/
@@ -396,6 +571,11 @@ button:focus {
 	box-shadow: 5px 5px 0px 0px var(--color-pink);
 	transition: opacity 300ms ease-in;
 }
+
+.fa-arrow-up {
+	color: white;
+}
+
 
 /* arrowUp.style.opacity = 2 - homeHeigth  / window.scrollY; */
 /* 이렇게 바로 자스에서 구현해주는 방법도 있다. 가상 클래스를 안 만들어줘도 됨 */
@@ -417,19 +597,23 @@ button:focus {
 	gap: 1rem;
 	padding: 1rem;
 	font-size: 3rem;
-	color: var(--color-black);
+	color: var(--color-white);
 }
 
 .contact__link {
 	transition: color 250ms ease-in;
 }
 
-.contact__link:hover {
+.fa-github, .fa-linkedin {
+	color: white;
+}
+
+.fa-github:hover, .fa-linkedin:hover {
 	color: var(--color-pink);
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 	.section {
 		padding: 3rem 2rem;
 	}
@@ -439,18 +623,19 @@ button:focus {
 	}
 
 	.description {
-		font-size: 1rem;
+		font-size: 1.7rem;
+		margin-bottom: 50px;
 	}
 
 	.header {
 		flex-direction: column;
 		align-items: start;
-		background-color: var(--color-primary);
+		background-color: var(--color-white);
 	}
 
 	.header__toggle {
 		display: block;
-		color: var(--color-white);
+		color: var(--color-black);
 		font-size: 2rem;
 		position: absolute;
 		top: 1.3rem;
@@ -495,20 +680,27 @@ button:focus {
 	}
 
 	.majors {
+		max-width: 10rem;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 	}
 
 	.major {
 		max-width: 25rem;
-	}
+	   }
 
 	.job {
 		justify-content: center;
 	}
 
 	.skills {
-		grid-template-columns: 1fr;
+		flex-direction: column;
+		margin-right: 15px;
+	}
+
+	.skills__list__ctro__comuni {
+		margin-top: 20px;
 	}
 
 	.categories {
@@ -520,7 +712,7 @@ button:focus {
 	}
 
 	.projects {
-		grid-template-columns: repeat(1, 2fr);
+		grid-template-columns: repeat(0, 1fr);
 	}
 		
 	.arrow-up {

@@ -6,9 +6,9 @@ const headerHeight = header.getBoundingClientRect().height;	// getBoundingClient
 
 document.addEventListener('scroll', () => {		// 화살표 함수
 	if(window.scrollY > headerHeight) {
-		header.classList.add('header--dark');
+		header.classList.add('header--pink');
 	} else {
-		header.classList.remove('header--dark');
+		header.classList.remove('header--pink');
 	}
 });
 

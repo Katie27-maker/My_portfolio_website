@@ -12,7 +12,6 @@ const navItems = sectionIds.map((id) => document.querySelector(`[href="${id}"]`)
 
 const visibleSelections = sectionIds.map(() => false);
 let activeNavItem = navItems[0];
-console.log(activeNavItem);
 
 const options = {
     threshold: [0, 0.25, 0.5],
@@ -30,7 +29,7 @@ function observerCallback(entries) {
         const index = sectionIds.indexOf(`#${entry.target.id}`);
         visibleSelections[index] = entry.isIntersecting;
         selectLastOne = 
-        index === sectionIds.length - 1 && 
+        index === sectionIds.length - 1 &&
         entry.isIntersecting && 
         entry.intersectionRatio >= 0.95;
     });

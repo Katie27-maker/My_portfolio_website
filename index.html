@@ -34,6 +34,7 @@
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/slider.js" defer></script>
     <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,16 +47,22 @@
     <!-- header -->
     <header class="header">
       <div class="header__logo">
-        <img class="header__logo__img" src="/images/modified.ico" />
-        <h1 class="header__logo__title"><a href="#">JUHEE</a></h1>
+        <!-- <img class="header__logo__img" src="/images/modified.ico" /> -->
+        <h1 class="header__logo__title"><a href="#">ＪＵＨＥＥ ＫＩＭ</a></h1>
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a class="header__menu__item active" href="#home">home</a></li>
-          <li><a class="header__menu__item" href="#about">about</a></li>
-          <li><a class="header__menu__item" href="#skills">my skills</a></li>
-          <li><a class="header__menu__item" href="#work">work</a></li>
-          <li><a class="header__menu__item" href="#contact">contact</a></li>
+          <li>
+            <a class="header__menu__item active" href="#home">< home /></a>
+          </li>
+          <li><a class="header__menu__item" href="#about">< about /></a></li>
+          <li>
+            <a class="header__menu__item" href="#skills">< my skills /></a>
+          </li>
+          <li><a class="header__menu__item" href="#work">< work /></a></li>
+          <li>
+            <a class="header__menu__item" href="#contact">< contact /></a>
+          </li>
         </ul>
       </nav>
       <button class="header__toggle" aria-lable="navigation menu toggle">
@@ -68,74 +75,177 @@
       <!-- Home -->
       <section id="home">
         <div class="home__container">
-          <img
+          <!-- <img
             home="home__avatar"
             src="images/modified.ico"
             alt="Ellie's profile"
-          />
+          /> -->
           <h2 class="home__title">
-            Hello <br />
-            <strong class="home__title--strong">I&#39;m Developer, </strong
-            >Juhee
+            - 김주희 - <br />
+            <strong class="home__title--strong">웹 개발자 포트폴리오 </strong>
           </h2>
-          <p class="home__description">A web developer</p>
+          <p class="home__description">
+            사용자 경험을 중요하게 생각하는 프론트앤드 개발자입니다.
+          </p>
           <a class="home__contact" href="#contact">Contact me</a>
-        </div>
       </section>
+      <hr>
       <!-- About -->
       <section id="about" class="section max-container">
-        <h2 class="title">About Me</h2>
-        <!-- <p>방송통신대학교(컴퓨터과학과)</p> -->
-        <ul class="majors">
-          <li class="major">
-            <i
-              class="fa-brands fa-html5 majors__icon"
-              style="color: #ffd43b"
-            ></i>
-            <p class="major__title">Front-end</p>
-            <p>HTML, CSS, Javascript, React, Web APIs</p>
-          </li>
-          <li class="major">
-            <i class="fa-solid fa-server majors__icon"></i>
-            <p class="major__title">Back-end</p>
-            <p>Java</p>
-            <p>python</p>
-          </li>
-        </ul>
+        <h2 class="title"><strong>About me</strong></h2>
+        <div class="majors">
+          <div class="majors__icon__title">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-person-hearts"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="major__subject"><strong>이름</strong></div>
+              <div>김주희</div>
+            </div>
+          </div>
+          <div class="majors__icon__title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-balloon-heart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"
+              />
+            </svg>
+            <div>
+              <div class="major__subject"><strong>생년월일</strong></div>
+              <div>95.12.11</div>
+            </div>
+          </div>
+          <div class="majors__icon__title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-geo-alt-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+              />
+            </svg>
+            <div>
+              <div class="major__subject"><strong>주소지</strong></div>
+              <div>서울특별시 공릉동</div>
+            </div>
+          </div>
+          <div class="majors__icon__title">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-phone-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="major__subject"><strong>연락처</strong></div>
+              <div>010-6698-5266</div>
+            </div>
+          </div>
+          <div class="majors__icon__title">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-envelope-at-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"
+                />
+                <path
+                  d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="major__subject"><strong>이메일</strong></div>
+              <div>wbdl2747@gmail.com</div>
+            </div>
+          </div>
+          
+        </div>
       </section>
+      <hr>
       <!-- Skills -->
       <section id="skills" class="section">
         <div class="max-container">
-          <h2 class="title">My Skills</h2>
+          <h1 class="title"><strong>Skills</strong></h1>
           <p class="description">Skills & Attributes</p>
-          <div class="skills">
-            <section class="skills__coding">
-              <h3 class="skills__title">Coding Skills</h3>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Java</li>
-              </ul>
-            </section>
-            <section class="skills__tools">
-              <h3 class="skills__title">Tools</h3>
-              <ul>
-                <li>Visual Studio Code</li>
-                <li>IntelliJ</li>
-                <li>Brackets</li>
-                <li>Figma</li>
-              </ul>
-            </section>
-            <section class="skills__etc">
-              <h3 class="skills__title">Ets</h3>
-              <ul>
-                <li>Git</li>
-                <li>GitHub</li>
-              </ul>
-            </section>
+          <div class="skills__list">
+            <div class="skills__list__front__back">
+              <div class="skills__front__list">
+                <h3 class="skills__magin">Frontend</h3>
+                <img
+                  src="/images/skills/프론트앤드.PNG"
+                  alt="프론트앤드"
+                  width="300"
+                  height="450"
+                />
+              </div>
+              <div class="skills__backend__list">
+                <h3 class="skills__magin">Backend</h3>
+                <img
+                  src="/images/skills/백엔드.PNG"
+                  alt="백엔드"
+                  width="200"
+                  height="130"
+                />
+              </div>
+            </div>
+            <div class="skills__list__ctro__comuni">
+              <div class="skills__controll__list">
+                <h3 class="skills__magin">version control</h3>
+                <img
+                  src="/images/skills/버전컨트롤.PNG"
+                  alt="버전컨트롤"
+                  width="290"
+                  height="140"
+                />
+              </div>
+              <div class="skills__comuni__list">
+                <h3 class="skills__magin">communication</h3>
+                <img
+                  src="/images/skills/커뮤니케이션.PNG"
+                  alt="커뮤니케이션"
+                  width="250"
+                  height="100"
+                />
+              </div>
+            </div>
           </div>
-        </div>
       </section>
       <!-- Work -->
       <section id="work" class="section">
@@ -145,23 +255,114 @@
           <ul class="categories">
             <li>
               <button class="category category--selected" data-category="all">
-                All <span class="category__count">2</span>
+                All <span class="category__count">1</span>
               </button>
             </li>
-            <li>
+            <!-- <li>
               <button class="category" data-category="front-end">
-                Front-end <span class="category__count">2</span>
+                Front-end <span class="category__count">1</span>
               </button>
             </li>
             <li>
               <button class="category" data-category="back-end">
                 Back-end <span class="category__count">1</span>
               </button>
-            </li>
+            </li> -->
           </ul>
         </div>
-        <ul class="projects">
-          <li class="project" data-type="front-end">
+        <div class="projects">
+          <div class="max-container">
+              <div class="project" alt="project2" data-type="back-end">
+              <img class="project__img" src="/images/projects/project2.PNG" alt="project2">
+              <div class="project__details">
+                <h2 style="margin-bottom: 10px;">MRS</h2>
+                <p>국비 팀 프로젝트 기간에 작업한 CRUD입니다.</p>
+                <div class="pro">
+                   <h4># 프로젝트 기간</h4> 
+                  <p style="margin-bottom: 10px;">2023.11.07 ~ 2024.12.15</p>
+                </div>
+                <div class="project__details__title">
+                  <h4>#스킬 </h4>
+                <ul class="project__title__ul1">
+                  <li>MySQL </li>
+                  <li>Java </li>
+                  <li>JSP </li>
+                  <li>MyBatis </li>
+                  <li>Bootstrap </li>
+                </ul>
+                </div>
+                <div class="project__title__ul2">
+                  <h4># 구현 내용</h4>
+                <ul>
+                  <li>데이터 베이스 설계 및 구축</li>
+                  <li>MVC구조의 Backend구현</li>
+                  <li>Bootstrap을 활용한 Frontend구현</li> 
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="project" alt="project2" data-type="front-end">
+            <img class="project__img" src="/images/projects/포트폴리오 캡쳐.PNG" alt="project2">
+            <div class="project__details">
+              <h2 style="margin-bottom: 10px;">MRS</h2>
+              <p>국비 팀 프로젝트 기간에 작업한 CRUD입니다.</p>
+              <div class="pro">
+                 <h4># 프로젝트 기간</h4>
+                <p style="margin-bottom: 10px;">2024.01.16 ~ 2024.02.24</p>
+              </div>
+              <div class="project__details__title">
+                <h4>#스킬 </h4>
+              <ul class="project__title__ul1">
+                <li>MySQL </li>
+                <li>Java </li>
+                <li>JSP </li>
+                <li>MyBatis </li>
+                <li>Bootstrap </li>
+              </ul>
+              </div>
+              <div class="project__title__ul2">
+                <h4># 구현 내용</h4>
+              <ul>
+                <li>데이터 베이스 설계 및 구축</li>
+                <li>MVC구조의 Backend구현</li>
+                <li>Bootstrap을 활용한 Frontend구현</li> 
+              </ul>
+            </div>
+            </div>
+        </div> -->
+    </section>
+          <!-- <li class="project" data-type="back-end">
+            <a href="#" target="_blank">
+              <img
+                src="images/projects/project2.PNG"
+                alt="project2"
+                class="project__img"
+              />
+              <div class="project__metadata">
+                <h3 class="project__title">Project #1</h3>
+                <div>
+                  <p>국비 기관 팀 프로젝트 수행 결과물 입니다.</p>
+                  <h4># Period : 2022.02.07 ~ 2022.03.30</h4>
+                </div>
+                <h4># Tech</h4>
+                <ul>
+                  <li>MySQL</li>
+                  <li>Java</li>
+                  <li>JSP</li>
+                  <li>MyBatis</li>
+                  <li>Bootstrap</li>
+                </ul>
+                <h4># My Work</h4>
+                <ul>
+                  <li>데이터 베이스 설계 및 구축</li>
+                  <li>MVC구조의 Backend구현</li>
+                  <li>Bootstrap을 활용한 Frontend구현</li>
+                </ul>
+              </div>
+            </a>
+          </li> -->
+          <!-- <li class="project" data-type="front-end">
             <a href="#" target="_blank">
               <img
                 src="images/projects/project1.PNG"
@@ -169,26 +370,12 @@
                 class="project__img"
               />
               <div class="project__metadata">
-                <h3 class="project__title">Project #1</h3>
-                <p>Coding with HTML, CSS, Javascript, API</p>
-              </div>
-            </a>
-          </li>
-          <li class="project" data-type="front-end">
-            <a href="#" target="_blank">
-              <img
-                src="images/projects/project1.PNG"
-                alt="project2"
-                class="project__img"
-              />
-              <div class="project__metadata">
                 <h3 class="project__title">Project #2</h3>
-                <p>Coding with HTML, CSS, Javascript, API</p>
+                <p class="project__skills">Clone Coding with HTML, CSS, Ajax, API</p>
               </div>
             </a>
-          </li>
-        </ul>
-      </section>
+          </li> -->
+    
       <!-- Arrow up -->
       <aside class="arrow">
         <a class="arrow-up" href="#home" title="back to top">
