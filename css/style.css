@@ -61,11 +61,11 @@ button:focus {
 	outline: 1px solid transparent;
 }
 
-img {
+/* img {
 	max-width: 100%;
 	width: auto !important;
-	height: auto !important;
-}
+	height: auto !important;	/*브라우저 크기에 맞춰서 자동 조절
+} */
 
 hr {
 	width: 80%;
@@ -454,21 +454,28 @@ svg {
 /* 프로젝트 */
 .projects {
 	display: grid;
-	grid-template-columns: repeat(2, 2fr);
-	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(2, 2fr);	/*ROW, COLUMS*/
+	grid-template-rows: repeat(1, 2fr);
 	gap: 1rem;
 	transition: all 250ms ease-out;
 	position: relative;
+
 }
 
 .project {
-	width: 550px;
-	height: 320px;
+	display: flex;
+	width: 100%;
+	height: 400px;
+	align-items: center;
+	justify-content: center;
 }
 
 .project__img {
 	border-radius: 10px;
+
 	width: 100%;
+	height: 100%;
+	display: inline;
 }
 
 .project__details {
@@ -479,6 +486,99 @@ svg {
 	z-index: 1;
 	left: 0; /* 추가 */
 	width: 100%; /* 추가 */
+	height: 100%;
+	border-radius: 10px;
+ }
+
+.projects__img:hover .project__details {
+	display: block;
+}
+
+.project__metadata {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-black);
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 250ms ease-in;
+	transform: translateY(-10px);
+}
+
+.project__metadata:hover {
+	opacity: 0.8;
+	transform: translateY(0px);
+   }
+   
+.project__title:after {
+	content: '';
+	display: block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0.5rem 0;
+	width: 50px;
+	height: 2px;
+	background-color: var(--color-pink);
+}
+
+.project__skills {
+	color: white;
+}
+
+/*  */
+.project__details__title {
+	display: flex;
+	justify-content: center;
+}
+
+.project__title__ul {
+	display: flex;
+	margin-left: 50px;
+}
+
+.project__title__ul1 {
+	list-style: none;
+}
+
+.project__title__ul1>li {
+	float: left;
+	margin-left: 10px;
+}
+
+.project__title__ul2{
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.project__title__ul2>ul>li {
+	text-align: left;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+
+
+/* .project__img {
+	border-radius: 10px;
+	width: 100%;
+}
+
+.project__details {
+	display: none;
+	background-color: gray;
+	padding: 10px;
+	border: 1px solid #ccc;
+	z-index: 1;
+	left: 0;
+	width: 100%;
 	height: 100%;
 	border-radius: 10px;
  }
@@ -712,9 +812,17 @@ svg {
 	}
 
 	.projects {
-		grid-template-columns: repeat(0, 1fr);
+		grid-template-columns: repeat(1, 2fr);
 	}
+	
+	.project__details {
+		width: 100%;
+	}
+
+	.project__img {
 		
+	}
+
 	.arrow-up {
 		font-size: 2rem;
 		width: 3rem;
