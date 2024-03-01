@@ -481,9 +481,9 @@ svg {
 .project__details {
 	display: none;
 	background-color: gray;
-	padding: 10px;
 	border: 1px solid #ccc;
-	z-index: 1;
+	padding-top: 40px;
+	/* z-index: 1;  처음에 썼던 이유는 마우스 호버했을 때 이미지보다 텍스트가 위로 올라오게 하려고 했는데  자스에서 변경 했기 때문에 필요가 없음 포스트잇, 컴포넌트 모달창이 여러개일 때*/
 	left: 0; /* 추가 */
 	width: 100%; /* 추가 */
 	height: 100%;
@@ -491,7 +491,7 @@ svg {
  }
 
 .projects__img:hover .project__details {
-	display: block;
+	display: flex;
 }
 
 .project__metadata {
@@ -532,6 +532,7 @@ svg {
 }
 
 /*  */
+
 .project__details__title {
 	display: flex;
 	justify-content: center;
