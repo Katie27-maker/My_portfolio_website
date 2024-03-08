@@ -679,6 +679,14 @@ svg {
 	margin-bottom: 5px;
 }
 
+.Source__code__btn {
+	font-size: 15px;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-right: 20px;
+	font-weight: bolder;
+}
+
 /*Arroy up*/
 .arrow-up {
 	background-color: var(--color-black);
