@@ -1,8 +1,8 @@
 <h1>제 포트폴리오 웹사이트를 소개합니다</h1>
 
 <h1>"Portfolio 웹사이트"</h1>
-![스크린샷 2024-03-23 오후 7 32 35](https://github.com/Katie27-maker/My_portfolio_website/assets/59760987/85d00c04-81fb-4991-bb0d-56380946d216)
-![스크린샷 2024-03-23 오후 7 41 02](https://github.com/Katie27-maker/My_portfolio_website/assets/59760987/237181a1-2bc6-452b-b8fc-678772365f0f)
+(https://github.com/Katie27-maker/My_portfolio_website/assets/59760987/85d00c04-81fb-4991-bb0d-56380946d216)
+(https://github.com/Katie27-maker/My_portfolio_website/assets/59760987/237181a1-2bc6-452b-b8fc-678772365f0f)
 
 
 <blockquote><h3>개요</h3></blockquote>
