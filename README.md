@@ -1,8 +1,9 @@
 <h1>제 포트폴리오 웹사이트를 소개합니다</h1>
 
 <h1>"Portfolio 웹사이트"</h1>
-![화면-기록-2024-04-18-오후-4 04 37](https://github.com/Katie27-maker/My_portfolio_website/assets/59760987/3aca389f-6474-437c-959f-79d5152e0145.gif)
-
+<img src="https://github.com/Katie27-maker/My_portfolio_website/assets/151722889/39649593-ccb1-422d-8c83-4b992c203d6c" alt="화면-기록-2024-04-18-오후-4 04 37">
+<br>
+<br>
 
 <blockquote><h3>개요</h3></blockquote>
 <p>프로젝트, 스킬, 깃허브 등을 소개하는 포트폴리오 웹사이트 입니다.</p>
